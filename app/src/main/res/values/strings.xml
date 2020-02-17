@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BiblioApp</string>
+    <string name="app_title">Nom de l\'application</string>
+    <string name="app_genre">Genre</string>
+    <string name="app_year">Année de sortie</string>
+    <string name="by_genre">Filtrer par genre</string>
+    <string name="by_year">Filtrer par année</string>
+    <string name="search">Rechercher</string>
+    <string name="text_search_placeholder">Rechercher une application</string>
+</resources>

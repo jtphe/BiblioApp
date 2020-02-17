@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/biblio_app_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:placeholderImage="@drawable/ic_image_black_24dp"
+        app:layout_constraintRight_toLeftOf="@id/biblio_app_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/biblio_app_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/biblio_app_image"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/biblio_app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/biblio_app_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_genre"
+            app:layout_constraintRight_toLeftOf="@id/biblio_app_year"
+            app:layout_constraintTop_toBottomOf="@id/biblio_app_title" />
+
+        <TextView
+            android:id="@+id/biblio_app_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:text="@string/app_year"
+            app:layout_constraintLeft_toRightOf="@id/biblio_app_genre"
+            app:layout_constraintTop_toBottomOf="@+id/biblio_app_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

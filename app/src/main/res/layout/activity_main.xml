@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_biblio_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/biblio_item_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_biblio_app">
+
+        <Button
+            android:id="@+id/biblio_app_btn_filterGenre"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/by_genre"
+            app:layout_constraintRight_toLeftOf="@id/biblio_app_btn_filterYear"
+            app:layout_constraintStart_toStartOf="@id/container_buttons"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/biblio_app_btn_filterYear"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/by_year"
+            app:layout_constraintStart_toEndOf="@id/biblio_app_btn_filterGenre"
+            app:layout_constraintLeft_toRightOf="@id/biblio_app_btn_filterGenre"
+            app:layout_constraintRight_toLeftOf="@+id/biblio_app_btn_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/biblio_app_btn_search"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:text="Rechercher"
+            app:layout_constraintStart_toEndOf="@id/biblio_app_btn_filterYear"
+            app:layout_constraintEnd_toEndOf="@id/container_buttons"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
